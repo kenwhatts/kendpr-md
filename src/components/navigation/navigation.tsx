@@ -13,21 +13,19 @@ export function Navigation({ pageType }: { pageType: string }) {
 
   return (
     <>
-      <nav className="bg-opacity-50 fixed top-0 right-0 left-0 z-40 border-b border-b-neutral-700 bg-neutral-800 backdrop-blur-md">
-        <div className="mx-auto flex max-w-(--breakpoint-sm) justify-between px-[3%] py-2 sm:px-0">
-          <a href="/">
-            <Logo location="navigation" />
-          </a>
-          {dialogStatus === "close" && (
-            <button
-              aria-label="Sandwhich Menu"
-              title="Sandwhich Menu"
-              onClick={() => setDialogStatus("open")}
-              className="squish text-2xl duration-150 ease-in-out">
-              &#129386;
-            </button>
-          )}
-        </div>
+      <nav className="fixed top-12 left-1/2 z-40 flex w-full max-w-[calc(100%-13%)] -translate-x-1/2 justify-between rounded-xl bg-neutral-800 px-6 py-3 backdrop-blur-md sm:max-w-[calc(var(--breakpoint-sm)*(1-0.13))]">
+        <a href="/">
+          <Logo location="navigation" />
+        </a>
+        {dialogStatus === "close" && (
+          <button
+            aria-label="Sandwhich Menu"
+            title="Sandwhich Menu"
+            onClick={() => setDialogStatus("open")}
+            className="squish text-2xl duration-150 ease-in-out">
+            &#129386;
+          </button>
+        )}
       </nav>
       <DialogMenu
         pageType={pageType}
