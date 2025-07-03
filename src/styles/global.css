@@ -102,14 +102,6 @@
   }
   @font-face {
     font-family: "Inter";
-    font-weight: 500;
-    src:
-      url("/assets/fonts/inter/Inter-Medium.woff2") format("woff2"),
-      url("/assets/fonts/inter/Inter-Medium.woff") format("woff");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Inter";
     font-weight: 600;
     src:
       url("/assets/fonts/inter/Inter-SemiBold.woff2") format("woff2"),
@@ -132,4 +124,19 @@
       url("/assets/fonts/inter/Inter-Black.woff") format("woff");
     font-display: swap;
   }
+}
+
+@theme {
+  --color-*: initial;
+  --color-primary: #0d0d0d;
+  --color-primary-darker: #080808;
+  --color-secondary: #ccd5ff;
+  --color-accent: #1f2f94;
+
+  --font-sans:
+    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji", "Inter";
+
+  --breakpoint-xsm: 500px;
+  --breakpoint-maxSm: 640px;
 }
