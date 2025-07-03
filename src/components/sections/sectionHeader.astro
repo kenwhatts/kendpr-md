@@ -4,8 +4,7 @@ import Linkout from "../icons/linkout.astro";
 const { type, title, linkText, linkUrl } = Astro.props;
 ---
 
-<div
-  class="relative mb-6 flex items-center justify-between px-4 after:absolute after:bottom-[-35%] after:left-0 after:block after:h-px after:w-full after:bg-neutral-700">
+<div class="relative mb-6 flex items-center justify-between">
   {
     type === "OnlySection" ? (
       <h1 class="text-3xl">{title}</h1>
