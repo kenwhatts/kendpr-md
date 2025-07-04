@@ -94,35 +94,12 @@
 
   @font-face {
     font-family: "Inter";
-    font-weight: 400;
     src:
-      url("/assets/fonts/inter/Inter-Regular.woff2") format("woff2"),
-      url("/assets/fonts/inter/Inter-Regular.woff") format("woff");
+      url("/assets/fonts/inter-variable.woff2")
+        format("woff2 supports variations"),
+      url("/assets/fonts/inter-variable.woff2") format("woff2-variations");
     font-display: swap;
-  }
-  @font-face {
-    font-family: "Inter";
-    font-weight: 600;
-    src:
-      url("/assets/fonts/inter/Inter-SemiBold.woff2") format("woff2"),
-      url("/assets/fonts/inter/Inter-SemiBold.woff") format("woff");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Inter";
-    font-weight: 700;
-    src:
-      url("/assets/fonts/inter/Inter-Bold.woff2") format("woff2"),
-      url("/assets/fonts/inter/Inter-Bold.woff") format("woff");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Inter";
-    font-weight: 900;
-    src:
-      url("/assets/fonts/inter/Inter-Black.woff2") format("woff2"),
-      url("/assets/fonts/inter/Inter-Black.woff") format("woff");
-    font-display: swap;
+    font-weight: 100 900;
   }
 }
 
@@ -134,8 +111,8 @@
   --color-accent: #1f2f94;
 
   --font-sans:
-    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji", "Inter";
+    Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --breakpoint-xsm: 500px;
   --breakpoint-maxSm: 640px;
