@@ -35,5 +35,4 @@ export default {
       iscurrentpage: "iscurrentpage='true'",
     },
   },
-  plugins: [require("@tailwindcss/typography")],
 };
