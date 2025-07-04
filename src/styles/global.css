@@ -36,25 +36,25 @@
     }
   }
   .border-bottom {
-    @apply maxSm:border-b border-y-neutral-700 pb-16;
+    @apply maxSm:border-b border-y-secondary pb-16;
   }
   .select-headings {
-    @apply prose-headings:font-bold prose-headings:text-neutral-400;
+    @apply prose-headings:font-bold prose-headings:text-secondary;
   }
   .select-p {
-    @apply prose-p:text-neutral-500;
+    @apply prose-p:text-secondary;
   }
   .select-a {
-    @apply prose-a:duration-200 prose-a:ease-in-out prose-a:hover:underline prose-a:focus-visible:underline prose-a:text-neutral-500 prose-a:hover:text-accent-dark prose-a:focus-visible:text-accent-dark;
+    @apply prose-a:duration-200 prose-a:ease-in-out prose-a:hover:underline prose-a:focus-visible:underline prose-a:text-secondary prose-a:hover:text-accent prose-a:focus-visible:text-accent;
   }
   .select-li {
-    @apply prose-li:text-neutral-500;
+    @apply prose-li:text-secondary;
   }
   .select-imgs {
     @apply prose-img:pointer-events-none prose-img:select-none;
   }
   .select-blockquote blockquote {
-    @apply border-l-4 border-neutral-700 pl-3;
+    @apply border-secondary border-l-4 pl-3;
   }
   .select-blockquote blockquote > p {
     @apply text-[hsl(268,8%,55%)]!;
@@ -83,7 +83,7 @@
   }
 
   :root {
-    --border-clr: #495057;
+    --border-clr: var(--color-secondary);
   }
   .fade-border-right {
     border-image: linear-gradient(to right, var(--border-clr), transparent 40%)

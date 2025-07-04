@@ -14,7 +14,7 @@ const fetchImages = import.meta.glob<{ default: ImageMetadata }>(
 );
 ---
 
-<div class="aspect-16/4 overflow-hidden rounded-lg border border-neutral-700">
+<div class="aspect-16/4 overflow-hidden rounded-lg border border-secondary">
   {
     internal && fetchImages[imgPath] ? (
       <Image
