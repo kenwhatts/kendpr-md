@@ -9,10 +9,7 @@ const getImage = import.meta.glob<{ default: ImageMetadata }>(
 );
 ---
 
-<Section
-  title="My Works"
-  linkText="See more on Github"
-  linkUrl="https://github.com/kenwhatts">
+<Section icon={projectIcon} title="My Recent Projects:">
   {
     projects.frontmatter.list.map(
       (i: {

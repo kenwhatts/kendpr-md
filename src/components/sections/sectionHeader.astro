@@ -1,8 +1,8 @@
 ---
 import type { Props } from "../../type/sectionHeader";
-import Linkout from "../icons/linkout.astro";
+import { Image } from "astro:assets";
 
-const { type, title, linkText, linkUrl } = Astro.props as Props;
+const { type, icon, title } = Astro.props as Props;
 ---
 
 <div class="relative mb-6 flex items-center justify-between">
@@ -10,17 +10,7 @@ const { type, title, linkText, linkUrl } = Astro.props as Props;
     type === "MainSection" ? (
       <h1 class="text-3xl">{title}</h1>
     ) : (
-      <h2 class="text-lg">{title}</h2>
-    )
-  }
-  {
-    linkText && linkUrl ? (
-      <a class="flex items-center gap-x-2 text-sm" href={linkUrl}>
-        {linkText}
-        <Linkout />
-      </a>
-    ) : (
-      ""
+      <h2 class="text-xl">{title}</h2>
     )
   }
 </div>
