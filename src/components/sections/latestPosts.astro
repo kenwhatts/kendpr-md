@@ -8,14 +8,14 @@ const posts = await getCollection("posts");
 
 {
   posts.length !== 0 && (
-    <Section title="Posts">
+    <Section title="Checkout my latest post">
       {posts
         .sort(
           (a, b) =>
             new Date(b.data.pubDate).getTime() -
             new Date(a.data.pubDate).getTime(),
         )
-        .slice(0, 3)
+        .slice(0, 1)
         .map((post) =>
           post.data.title && post.data.description && post.data.image ? (
             <PostCard
