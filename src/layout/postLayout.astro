@@ -24,7 +24,7 @@ const metaTags: MetaTagProps = {
     <Column wrapsBlogPost="true">
       <a
         href="/posts"
-        class="flex w-fit items-center gap-x-1 rounded-sm border border-secondary/20 px-4 py-1.5 text-sm hover:bg-primary/5 hover:text-secondary hover:no-underline">
+        class="border-secondary/20 hover:bg-primary/5 hover:text-secondary flex w-fit items-center gap-x-1 rounded-sm border px-4 py-1.5 text-sm hover:no-underline">
         <Arrow />
         Back to Posts
       </a>
@@ -37,7 +37,7 @@ const metaTags: MetaTagProps = {
             imgPath={frontmatter.image.src}
           />
           <div class="mt-5">
-            <time class="text-xs text-secondary" datetime={frontmatter.pubDate}>
+            <time class="text-secondary text-xs" datetime={frontmatter.pubDate}>
               {dayjs(frontmatter.pubDate).format("MMMM D, YYYY")}
             </time>
 
