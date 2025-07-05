@@ -2,10 +2,10 @@
 import SectionHeader from "../components/sections/sectionHeader.astro";
 import type { Props } from "../type/sectionHeader";
 
-const { title, linkText, linkUrl } = Astro.props as Props;
+const { title, icon } = Astro.props as Props;
 ---
 
-<SectionHeader title={title} linkText={linkText} linkUrl={linkUrl} />
+<SectionHeader type="SubSection" icon={icon} title={title} />
 <div class="grid grid-cols-1 gap-y-10">
   <slot />
 </div>
