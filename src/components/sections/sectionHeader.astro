@@ -5,7 +5,14 @@ import { Image } from "astro:assets";
 const { type, icon, title } = Astro.props as Props;
 ---
 
-<div class="relative mb-6 flex items-center justify-between">
+<div class="relative mb-6 flex items-center gap-x-4">
+  {
+    icon !== undefined ? (
+      <div class="size-10">
+        <Image src={icon} alt="" width={40} height={40} loading="lazy" />
+      </div>
+    ) : null
+  }
   {
     type === "MainSection" ? (
       <h1 class="text-3xl">{title}</h1>
