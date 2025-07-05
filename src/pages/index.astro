@@ -7,6 +7,7 @@ import LatestPosts from "../components/sections/latestPosts.astro";
 import Column from "../layout/column.astro";
 import Html from "../layout/html.astro";
 import type { MetaTagProps } from "../type/metaTypes";
+import Linkout from "../components/icons/linkout.astro";
 
 const metaTags: MetaTagProps = {
   title: "Ken Rula",
@@ -64,6 +65,9 @@ const metaTags: MetaTagProps = {
         </section>
         <section id="posts" class="scroll-mt-14">
           <LatestPosts />
+          <a href="/posts" class="mt-6 flex gap-x-2 items-center leading-none">
+            I have more posts <Linkout />
+          </a>
         </section>
       </main>
     </Column>
