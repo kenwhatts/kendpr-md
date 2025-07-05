@@ -1,12 +1,13 @@
 ---
+import type { Props } from "../../type/sectionHeader";
 import Linkout from "../icons/linkout.astro";
 
-const { type, title, linkText, linkUrl } = Astro.props;
+const { type, title, linkText, linkUrl } = Astro.props as Props;
 ---
 
 <div class="relative mb-6 flex items-center justify-between">
   {
-    type === "OnlySection" ? (
+    type === "MainSection" ? (
       <h1 class="text-3xl">{title}</h1>
     ) : (
       <h2 class="text-lg">{title}</h2>

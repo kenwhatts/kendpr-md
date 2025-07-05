@@ -3,6 +3,8 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "react",
-    "allowJs": true
+    "allowJs": true,
+    "verbatimModuleSyntax": true,
+    "exactOptionalPropertyTypes": false
   }
 }

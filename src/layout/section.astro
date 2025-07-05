@@ -1,12 +1,8 @@
 ---
 import SectionHeader from "../components/sections/sectionHeader.astro";
-const { title, linkText, linkUrl } = Astro.props;
+import type { Props } from "../type/sectionHeader";
 
-interface Props {
-  title: string;
-  linkText: string;
-  linkUrl: string;
-}
+const { title, linkText, linkUrl } = Astro.props as Props;
 ---
 
 <SectionHeader title={title} linkText={linkText} linkUrl={linkUrl} />
