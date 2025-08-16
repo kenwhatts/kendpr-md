@@ -83,7 +83,7 @@
   }
 
   :root {
-    --border-clr: var(--color-secondary);
+    --border-clr: #333;
   }
   .fade-border-right {
     border-image: linear-gradient(to right, var(--border-clr), transparent 40%)
