@@ -6,7 +6,7 @@ import Section from "../../layout/section.astro";
 import projectIcon from "../../about/skills/icons/headerIcon/project-icon.svg";
 
 const getImage = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/projects/*.{jpeg,jpg}",
+  "/src/assets/projects/*.{jpeg,jpg,webp}",
 );
 ---
 
@@ -21,7 +21,7 @@ const getImage = import.meta.glob<{ default: ImageMetadata }>(
       }) => (
         <a
           href={i.link}
-          class="xsm:p-8 xsm:rounded-2xl bg-primary-darker hover:bg-accent/30 rounded-lg p-3 no-underline!">
+          class="xsm:p-5 xsm:rounded-2xl bg-primary-darker hover:bg-hover-background rounded-lg p-3 no-underline! border border-transparent hover:border-secondary/20">
           <div class="xsm:rounded-[0.5rem] mb-4 relative grid aspect-video place-items-center overflow-hidden rounded">
             {getImage[i.img] ? (
               <Image
@@ -34,7 +34,7 @@ const getImage = import.meta.glob<{ default: ImageMetadata }>(
             ) : null}
           </div>
           <h3>{i.title}</h3>
-          <p class="text-sm mt-2">{i.description}</p>
+          <p class="text-sm">{i.description}</p>
         </a>
       ),
     )
