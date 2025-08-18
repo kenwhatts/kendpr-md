@@ -5,7 +5,7 @@ import Section from "../../layout/section.astro";
 import type { ImageMetadata } from "astro";
 
 const getImage = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/projects/*.{jpeg,jpg}",
+  "/src/assets/projects/*.{jpeg,jpg,webp}",
 );
 ---
 
