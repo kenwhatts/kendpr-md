@@ -121,4 +121,6 @@
 
   --breakpoint-xsm: 500px;
   --breakpoint-maxSm: 640px;
+
+  /* --floating-element-width: ; */
 }
