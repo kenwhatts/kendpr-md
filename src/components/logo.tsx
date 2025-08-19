@@ -9,7 +9,7 @@ export function Logo() {
         fill="currentColor">
         <path
           d="M22.046 38.252v-4.316L56.791 16.24v6.906l-26.653 12.84.216-.432v1.079l-.216-.432 26.653 12.841v6.906zM23.632 0L5.827 66.145H0L17.805 0z"
-          paint-order="stroke fill markers"
+          paintOrder="stroke fill markers"
         />
       </svg>
     </div>
