@@ -24,7 +24,7 @@ const metaTags: MetaTagProps = {
     <Column wrapsBlogPost="true">
       <a
         href="/posts"
-        class="flex w-fit items-center gap-x-1 rounded-sm border border-neutral-400/20 px-4 py-1.5 text-sm hover:bg-neutral-400/5 hover:text-neutral-100 hover:no-underline">
+        class="border-secondary/20 hover:bg-primary/5 hover:text-secondary flex w-fit items-center gap-x-1 rounded-sm border px-4 py-1.5 text-sm hover:no-underline">
         <Arrow />
         Back to Posts
       </a>
@@ -37,9 +37,7 @@ const metaTags: MetaTagProps = {
             imgPath={frontmatter.image.src}
           />
           <div class="mt-5">
-            <time
-              class="text-xs text-neutral-400"
-              datetime={frontmatter.pubDate}>
+            <time class="text-secondary text-xs" datetime={frontmatter.pubDate}>
               {dayjs(frontmatter.pubDate).format("MMMM D, YYYY")}
             </time>
 
@@ -47,7 +45,7 @@ const metaTags: MetaTagProps = {
           </div>
         </header>
         <article
-          class="select-blockquote prose-headings:mb-2 prose-h2:text-lg prose-p:mb-7 prose-a:underline prose-ol:mb-7 prose-ol:list-inside prose-ol:list-decimal prose-ul:mb-7 prose-ul:list-inside prose-ul:list-disc prose-a:text-accent-dark prose-a:hover:text-neutral-200 prose-a:focus-visible:text-neutral-200 leading-relaxed underline-offset-3">
+          class="select-blockquote prose-headings:mb-2 prose-h2:text-lg prose-p:mb-7 prose-a:underline prose-ol:mb-7 prose-ol:list-inside prose-ol:list-decimal prose-ul:mb-7 prose-ul:list-inside prose-ul:list-disc prose-a:text-accent prose-a:hover:text-secondary prose-a:focus-visible:text-secondary leading-relaxed underline-offset-3">
           <p>{frontmatter.description}</p>
           <slot />
         </article>

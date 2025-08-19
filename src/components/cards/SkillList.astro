@@ -4,7 +4,9 @@ import * as BackEnd from "../../about/skills/back-end.mdx";
 import * as Other from "../../about/skills/other.mdx";
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
+
 const cardType: string = Astro.props.type;
+
 const card = {
   get type() {
     switch (cardType) {
@@ -19,17 +21,19 @@ const card = {
     }
   },
 };
+
 const fetchIcons = import.meta.glob<{ default: ImageMetadata }>(
   "/src/about/skills/icons/headerIcon/*.svg",
 );
+
 const cardMatter = card.type?.frontmatter;
 ---
 
 {
   card.type != null ? (
-    <article class="prose-h2:text-base rounded-2xl border border-neutral-700 px-6 py-8">
-      <div class="grid gap-y-6">
-        <div class="relative flex items-center gap-x-4 after:absolute after:bottom-[-35%] after:h-px after:w-full after:bg-neutral-700">
+    <article>
+      <div class="grid gap-y-4">
+        <div class="relative flex items-center gap-x-4">
           <div class="size-10">
             {fetchIcons[cardMatter?.iconDarkMode] ? (
               <Image
@@ -41,11 +45,11 @@ const cardMatter = card.type?.frontmatter;
               />
             ) : null}
           </div>
-          <h2>{cardMatter?.title}</h2>
+          <h2 class="text-2xl">{cardMatter?.title}</h2>
         </div>
         <p>{cardMatter?.description}</p>
       </div>
-      <div class="prose-ul:mt-4 prose-h3:mt-5 prose-h3:text-sm prose-ul:grid prose-ul:items-center prose-ul:gap-y-2 prose-li:flex prose-li:items-center prose-li:gap-x-4 prose-li:text-sm prose-img:size-8">
+      <div class="mt-8 prose-h3:mt-5 prose-h3:text-sm prose-ul:grid prose-ul:items-center prose-ul:gap-y-2 prose-li:flex prose-li:items-center prose-li:gap-x-4 prose-li:text-base prose-img:size-8">
         <card.type.Content />
       </div>
     </article>
