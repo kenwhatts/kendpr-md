@@ -106,10 +106,14 @@
 
 @theme {
   --color-*: initial;
-  --color-primary: #0d0d0d;
-  --color-primary-darker: #080808;
+  --color-primary-lighter: #141414;
+  --color-primary: #121212;
+  --color-primary-darker: #0d0d0d;
   --color-secondary: #ccd5ff;
-  --color-accent: #1f2f94;
+  --color-accent: #6173e5;
+
+  --color-hover-background: #292f51;
+  --color-border-color: #333;
 
   --font-sans:
     Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
