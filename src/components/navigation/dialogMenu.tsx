@@ -32,7 +32,7 @@ export function DialogMenu({
       className="group bg-primary/50 invisible fixed grid min-h-dvh min-w-full place-items-center backdrop-blur-md open:visible"
       aria-hidden={true}>
       <div
-        className="bg-primary-darker border-border-color flex w-3/4 max-w-[calc(100%-13%)] scale-0 flex-col-reverse rounded-2xl border px-[clamp(1rem,5%,2rem)] py-4 opacity-50 transition-all duration-200 ease-out group-open:scale-100 group-open:opacity-100 sm:max-w-[calc(var(--breakpoint-sm)*(1-0.13))]"
+        className="bg-primary-darker border-border-color flex w-3/4 max-w-[calc(100%-13%)] min-w-[375px] scale-0 flex-col-reverse rounded-2xl border px-[clamp(1rem,5%,2rem)] py-4 opacity-50 transition-all duration-200 ease-out group-open:scale-100 group-open:opacity-100 sm:max-w-[calc(var(--breakpoint-sm)*(1-0.13))]"
         tabIndex={0}
         aria-label="Menu"
         aria-hidden={dialogStatus === "close" ? true : false}
