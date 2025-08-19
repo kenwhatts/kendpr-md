@@ -14,8 +14,8 @@ export function Navigation({ pageType }: { pageType: string }) {
   return (
     <>
       <nav className="bg-primary-darker fixed top-12 left-1/2 z-40 flex w-full max-w-[calc(100%-13%)] -translate-x-1/2 justify-between rounded-xl px-6 py-3 backdrop-blur-md sm:max-w-[calc(var(--breakpoint-sm)*(1-0.13))]">
-        <a href="/">
-          <Logo location="navigation" />
+        <a className="not-prose" href="/">
+          <Logo />
         </a>
         {dialogStatus === "close" && (
           <button
