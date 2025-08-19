@@ -1,26 +1,23 @@
 ---
-import Linkout from "../icons/linkout.astro";
+import type { Props } from "../../type/sectionHeader";
+import { Image } from "astro:assets";
 
-const { type, title, linkText, linkUrl } = Astro.props;
+const { type, icon, title } = Astro.props as Props;
 ---
 
-<div
-  class="relative mb-6 flex items-center justify-between px-4 after:absolute after:bottom-[-35%] after:left-0 after:block after:h-px after:w-full after:bg-neutral-700">
+<div class="relative mb-6 flex items-center gap-x-4">
   {
-    type === "OnlySection" ? (
-      <h1 class="text-3xl">{title}</h1>
-    ) : (
-      <h2 class="text-lg">{title}</h2>
-    )
+    icon !== undefined ? (
+      <div class="size-10">
+        <Image src={icon} alt="" width={40} height={40} loading="lazy" />
+      </div>
+    ) : null
   }
   {
-    linkText && linkUrl ? (
-      <a class="flex items-center gap-x-2 text-sm" href={linkUrl}>
-        {linkText}
-        <Linkout />
-      </a>
+    type === "MainSection" ? (
+      <h1 class="text-3xl">{title}</h1>
     ) : (
-      ""
+      <h2 class="text-2xl">{title}</h2>
     )
   }
 </div>

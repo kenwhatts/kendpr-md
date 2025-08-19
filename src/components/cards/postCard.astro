@@ -14,27 +14,28 @@ interface Props {
 }
 ---
 
-<article>
-  <figure>
+<a
+  href={url}
+  class="bg-primary-darker p-3 rounded-lg no-underline! hover:bg-primary-lighter hover:border-border-color border border-transparent hover:text-accent!">
+  <div>
     <Thumbnail
       imgPath={image.src}
       internal={image.internal}
       alt={title}
       loading="lazy"
     />
-    <figcaption class="mx-2 mt-4 grid">
-      <time class="mb-3 text-xs text-neutral-400" datetime={pubDate}>
-        {pubDate}
-      </time>
-      <>
-        <a class="place-self-start font-bold" href={url}>
+    <div class="mt-4">
+      <div class="flex justify-between mb-4">
+        <p class="font-bold not-prose">
           {title}
-        </a>
-        <!-- <h3 class="group-hover:hidden">{title}</h3> -->
-      </>
-    </figcaption>
-  </figure>
-  <p class="mx-2 line-clamp-2 text-sm!">
-    {description}
-  </p>
-</article>
+        </p>
+        <time class="mb-2 text-xs" datetime={pubDate}>
+          {pubDate}
+        </time>
+      </div>
+      <p class="line-clamp-2 text-sm! not-prose">
+        {description}
+      </p>
+    </div>
+  </div>
+</a>
