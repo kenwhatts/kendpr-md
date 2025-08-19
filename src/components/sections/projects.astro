@@ -21,7 +21,7 @@ const getImage = import.meta.glob<{ default: ImageMetadata }>(
       }) => (
         <a
           href={i.link}
-          class="xsm:p-5 xsm:rounded-2xl bg-primary-darker hover:bg-hover-background rounded-lg p-3 no-underline! border border-transparent hover:border-secondary/20">
+          class="xsm:p-4 xsm:rounded-xl bg-primary-darker hover:bg-hover-background rounded-md p-3 no-underline! border border-transparent hover:border-secondary/20">
           <div class="xsm:rounded-[0.5rem] mb-4 relative grid aspect-video place-items-center overflow-hidden rounded">
             {getImage[i.img] ? (
               <Image
@@ -33,8 +33,8 @@ const getImage = import.meta.glob<{ default: ImageMetadata }>(
               />
             ) : null}
           </div>
-          <h3>{i.title}</h3>
-          <p class="text-sm">{i.description}</p>
+          <h3 class="leading-none">{i.title}</h3>
+          {/* <p class="text-sm">{i.description}</p> */}
         </a>
       ),
     )
